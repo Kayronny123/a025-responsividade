@@ -1,19 +1,113 @@
 * {
-    padding: 0;
-    margin: 0;
-    font-family: sans-serif;
-    color: white;
-  }
-  
-  #item-1 {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  color: white;
+}
+
+#item-1 {
+  background-color: steelblue;
+  width: 80%;
+  height: 100%;
+}
+
+#item-2 {
+  background-color: #fe7e02;
+  width: 20%;
+  order: -1;
+  height: 100%;
+}
+
+#item-3 {
+  background-color: #45525b;
+  width: 20%;
+  height: 100%;
+}
+
+/* 1. O primeiro layout é para telas de 1200px ou mais de largura;
+2. O segundo para telas entre 1200px e 800px de largura (considere 1000 como um ponto de quebra possível);
+3. O terceiro para telas de 800px ou menos. */
+/* main {
+  height: 100%;
+  display: flex;
+  margin: 10px;
+  gap: 10px;
+} */
+
+@media screen and(min-device-width: 1200px) and (max-device-width: 800px){
+  .container{
+   display: flex;
+   height: 100%;
+   gap: 10px;
+
+  }#item-1 {
     background-color: steelblue;
+    width: 80%;
+    height: 100%;
   }
   
   #item-2 {
     background-color: #fe7e02;
+    width: 20%;
+    order: -1;
+    height: 100%;
   }
   
   #item-3 {
     background-color: #45525b;
+    width: 20%;
+    height: 100%;
+  }
+}
+@media screen and(min-device-width: 418px) and (max-device-width: 8000px){
+  .container{
+   display: flex;
+   height: 100vh;
+   flex-wrap: wrap-reverse;
+  }
+  #item-1 {
+  background-color: steelblue;
+  width: 80%;
+  height: 100%;
+}
+
+#item-2 {
+  background-color: #fe7e02;
+  width: 20%;
+  order: -1;
+  height: 100%;
+}
+
+#item-3 {
+  background-color: #45525b;
+  width: 20%;
+  height: 100%;
+}
+}
+@media screen and(min-device-width: 320px) and (max-device-width: 480) {
+  .container{
+   display: flex;
+   height: 100vh;
+   flex-wrap: wrap-reverse;
+   flex-wrap: wrap;
+   gap: 1%;
+  }
+  #item-1 {
+    background-color: steelblue;
+    width: 100%;
+    height: 75%;
   }
   
+  #item-2 {
+    background-color: #fe7e02;
+    width: 45%;
+    order: -1;
+    height: 20%;
+  }
+  
+  #item-3 {
+    background-color: #45525b;
+    width: 45%;
+    height: 20%;
+  }
+}
